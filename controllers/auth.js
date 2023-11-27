@@ -15,6 +15,7 @@ async function register(req, res) {
             ...sanitizedData
         },
         select: {
+            id: true,
             name: true,
             email: true
         }

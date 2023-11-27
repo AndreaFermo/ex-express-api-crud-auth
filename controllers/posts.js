@@ -66,6 +66,7 @@ async function store(req, res, next) {
             image: requestUpdated.image,
             published: requestUpdated.published,
             categoryId: requestUpdated.categoryId,
+            userId: requestUpdated.userId,
             ...(requestUpdated.tags && requestUpdated.tags.length > 0
                 ? {
                       tags: {
@@ -179,7 +180,7 @@ async function destroy(req, res, next) {
             }
        });
 
-       res.json({"message":"post trovato con successo"});
+       res.json({"message":"post cancellato con successo"});
      
     }
    catch (error) {
